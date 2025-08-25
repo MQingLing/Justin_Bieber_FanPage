@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="description" content="Justin Bieber fan page — week 1 homework!" />
+  <title>Justin Bieber Fanpage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="home">
+    <nav class="nav container">
+        <button id="themeToggle" class="btn btn-ghost" aria-label="Toggle theme">🌙</button>
+      <a class="logo" href="#home">JB<span>♥</span>Fan</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#music">Music</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#join">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Justin Bieber</h1>
+          <p class="sub">A clean, fast fan hub. Pick a track, add your photos, and claim your fan card.</p>
+          <div class="hero-actions">
+            <button class="btn" id="playPeaches">▶ Play “Peaches”</button>
+            <a class="btn btn-ghost" href="#join">Get Fan Card</a>
+          </div>
+        </div>
+        <div class="hero-art slideshow" id="slideshow" aria-label="Justin Bieber photo slideshow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music -->
+    <section class="section" id="music">
+      <div class="container">
+        <h2 class="section-title">Featured Tracks</h2>
+        <div class="grid cards-3">
+          <article class="card track" data-video-id="kffacxfA7G4">
+            <h3>Baby</h3>
+            <p class="dim">Classic breakout hit.</p>
+            <button class="btn small">Play</button>
+          </article>
+          <article class="card track" data-video-id="fRh_vgS2dFE">
+            <h3>Sorry</h3>
+            <p class="dim">Dance-pop apology anthem.</p>
+            <button class="btn small">Play</button>
+          </article>
+          <article class="card track" data-video-id="tQ0yjYUFKAE">
+            <h3>Peaches</h3>
+            <p class="dim">Smooth R&B vibes.</p>
+            <button class="btn small">Play</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIY Gallery -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2 class="section-title">Your Gallery</h2>
+        <div class="row gap">
+          <input type="file" id="uploader" accept="image/*" multiple />
+          <button class="btn" id="clearGallery">Clear</button>
+        </div>
+        <div id="galleryGrid" class="grid gallery-grid" aria-live="polite"></div>
+        <p class="dim small">Tip: your photos save in this browser (localStorage).</p>
+      </div>
+    </section>
+
+    <!-- Video Player -->
+    <section class="section" id="video">
+      <div class="container">
+        <h2 class="section-title">Now Playing</h2>
+        <div id="playerWrap" class="player" role="region" aria-label="Video player">
+          <p class="dim">Choose a track above to load the video here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join / Fan Card -->
+    <section class="section" id="join">
+      <div class="container grid two">
+        <form id="joinForm" class="card form" autocomplete="on">
+          <h2 class="section-title">Join the Fan List</h2>
+          <label>
+            <span>Name</span>
+            <input type="text" id="fanName" placeholder="Your name" required />
+          </label>
+          <label>
+            <span>Favourite Song</span>
+            <input type="text" id="favSong" placeholder="e.g., Peaches" />
+          </label>
+          <button class="btn" type="submit">Generate Fan Card</button>
+          <p class="dim small">Saved locally only.</p>
+        </form>
+        <div class="card fan-card" id="fanCard" aria-live="polite">
+          <h3>Your Fan Card</h3>
+          <p class="dim">Fill the form to see your card.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="dim small">Made with vanilla HTML • CSS • JS</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
